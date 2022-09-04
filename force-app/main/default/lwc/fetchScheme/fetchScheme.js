@@ -153,6 +153,6 @@ export default class FetchScheme extends LightningElement {
             })
         }
 
-    } //Good job!
+    } 
 
 }
