@@ -1,0 +1,50 @@
+<template>
+    <div class="slds-grid slds-wrap slds-p-around_small">
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-combobox name="customer_type" label="Customer Type" placeholder="--None--"
+                options={customerOptions} onchange={cusTypeChange} required class="clsFrmFetchSchm">
+            </lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-combobox name="deposit_type" label="Deposit Type" placeholder="--None--" options={depTypeOptions}
+                onchange={depTypeChange} required class="clsFrmFetchSchm">
+            </lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-combobox name="payFreq_type" label="Payout Frequency Type" placeholder="--None--"
+                options={payFreqOptions} onchange={payoutFreqChange} required class="clsFrmFetchSchm">
+            </lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-combobox name="tenor_in_month" label="Tenor in Months" placeholder="--None--"
+                options={tenorMonthOptions} onchange={tenorMonthChange} required class="clsFrmFetchSchm">
+            </lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-combobox name="tenor_in_day" label="Tenor in Days" placeholder="--None--"
+                options={tenorDayOptions} onchange={tenorDayChange} required class="clsFrmFetchSchm">
+            </lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-input name="fd_amount" label="FD Amount" type="number" onchange={fdAmountChange} required
+                class="clsFrmFetchSchm">
+            </lightning-input>
+        </div>
+        <div class="slds-col slds-size_3-of-3 slds-p-around_small slds-align_absolute-center">
+            <lightning-button variant="brand" label="Fetch Scheme" title="Fetch Scheme" onclick={fetchScheme}>
+            </lightning-button>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-combobox name="interest_scheme_options" label="Scheme Options" placeholder="--None--"
+                options={listScheme} onchange={schmChange} required class="classForSaveButton">
+            </lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small"></div>
+        <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+            <lightning-input name="interest_rate" label="Interest Rate" type="number" disabled required
+                class="classForSaveButton" value={selectedIntRate}>
+            </lightning-input>
+        </div>
+
+    </div>
+</template>
